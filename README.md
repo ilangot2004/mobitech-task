@@ -1,10 +1,19 @@
 # Store Management API
 
+A RESTful Store Management API built using **Node.js, Express.js, and MySQL**.
+
+This API allows store owners to manage categories, products, customers, and orders.
+
+### Start the application
+
+```bash
 node app.js
+```
 
 ## Endpoints
 
 | Method | URL | Purpose |
+|---|---|---|
 | GET | `/api/categories` | Categories with product counts |
 | DELETE | `/api/categories/:id` | Delete a category if it has no products |
 | GET | `/api/products/never-ordered` | Products that have never been ordered |
@@ -15,3 +24,4 @@ node app.js
 | GET | `/api/products/ordered?from=2026-11-01&to=2026-11-30` | Products ordered within an inclusive date range |
 | GET | `/api/orders/most-ordered-product` | Product in the most orders in the last 30 days |
 | POST | `/api/orders/:id/cancel` | Cancel an order and restore its product stock |
+
